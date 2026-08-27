@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ecosystem: The Balance Protocol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MAIN MENU SCREEN -->
+    <div id="main-menu" class="screen active">
+        <div class="bg-particles"></div>
+        <div class="menu-content">
+            <div class="game-title">
+                <span class="globe-icon">🌍</span>
+                <h1>ECOSYSTEM</h1>
+                <h2>THE BALANCE PROTOCOL</h2>
+                <p class="subtitle">ภารกิจคืนสมดุลให้ระบบนิเวศ</p>
+            </div>
+            <div class="menu-buttons">
+                <button id="btn-start" class="btn primary-btn">▶ START MISSION</button>
+                <button id="btn-howtoplay" class="btn">📖 HOW TO PLAY</button>
+                <button id="btn-lab" class="btn">🧪 SCIENCE LAB</button>
+                <button id="btn-achievements" class="btn">🏆 ACHIEVEMENTS</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOW TO PLAY SCREEN -->
+    <div id="how-to-play-screen" class="screen">
+        <div class="modal-card">
+            <h2>📖 HOW TO PLAY</h2>
+            <div class="instructions">
+                <p><strong>1. สำรวจระบบนิเวศ:</strong> ใช้ WASD / ปุ่มทิศทาง เพื่อบังคับตัวละคร 🧑‍🔬</p>
+                <p><strong>2. สแกนเก็บข้อมูล:</strong> เข้าใกล้สิ่งมีชีวิตแล้วกดปุ่ม 🔍 SCAN (หรือ Spacebar/E)</p>
+                <p><strong>3. วิเคราะห์ปัญหา:</strong> เข้าใกล้ Science Station 🔬 เพื่อเปิดเมนูวิเคราะห์สายใยอาหาร</p>
+                <p><strong>4. แก้ปัญหา & ฟื้นฟู:</strong> บริหารจัดการพลังงาน ⚡ เพื่อฟื้นฟูประชากรสิ่งมีชีวิตหรือทรัพยากร</p>
+                <p><strong>5. คืนสมดุล:</strong> ทำให้ระดับ Balance Level reaching 90%+ เพื่อผ่านภารกิจ</p>
+            </div>
+            <button class="btn back-to-menu">◀ BACK TO MENU</button>
+        </div>
+    </div>
+
+    <!-- SCIENCE LAB SCREEN -->
+    <div id="science-lab-screen" class="screen">
+        <div class="modal-card large">
+            <h2>🧪 SCIENCE LAB (คลังความรู้วิทยาศาสตร์)</h2>
+            <div class="lab-grid">
+                <div class="lab-card" id="card-producer">
+                    <h3>🌱 PRODUCER (ผู้ผลิต)</h3>
+                    <p class="status-lock">🔒 ต้องสแกนพืชเพื่อปลดล็อก</p>
+                    <div class="card-content hidden">
+                        <p>สิ่งมีชีวิตที่สามารถสร้างอาหารเองได้โดยกระบวนการสังเคราะห์ด้วยแสง (Photosynthesis) โดยเปลี่ยนพลังงานแสงเป็นพลังงานเคมี เช่น พืชและสาหร่าว</p>
+                    </div>
+                </div>
+                <div class="lab-card" id="card-herbivore">
+                    <h3>🐇 PRIMARY CONSUMER (ผู้บริโภคอันดับ 1)</h3>
+                    <p class="status-lock">🔒 ต้องสแกนกระต่ายเพื่อปลดล็อก</p>
+                    <div class="card-content hidden">
+                        <p>สิ่งมีชีวิตที่กินพืชเป็นอาหาร (Herbivore) ได้รับถ่ายทอดพลังงานโดยตรงจากผู้ผลิต</p>
+                    </div>
+                </div>
+                <div class="lab-card" id="card-predator">
+                    <h3>🦊 PREDATOR (ผู้ล่า / ผู้บริโภคอันดับ 2)</h3>
+                    <p class="status-lock">🔒 ต้องสแกนสุนัขจิ้งจอกเพื่อปลดล็อก</p>
+                    <div class="card-content hidden">
+                        <p>สิ่งมีชีวิตที่กินสัตว์อื่นเป็นอาหาร (Carnivore) ทำหน้าที่ควบคุมประชากรสัตว์กินพืชไม่ให้มีมากเกินไป</p>
+                    </div>
+                </div>
+                <div class="lab-card" id="card-water">
+                    <h3>💧 AQUATIC SYSTEM (ระบบนิเวศแหล่งน้ำ)</h3>
+                    <p class="status-lock">🔒 ต้องสแกนแหล่งน้ำเพื่อปลดล็อก</p>
+                    <div class="card-content hidden">
+                        <p>คุณภาพน้ำ (ออกซิเจนและค่ามลพิษ) ส่งผลโดยตรงต่อผู้ผลิตและสัตว์น้ำ ความสะอาดของน้ำคือพื้นฐานของระบบนิเวศ</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn back-to-menu">◀ BACK TO MENU</button>
+        </div>
+    </div>
+
+    <!-- ACHIEVEMENTS SCREEN -->
+    <div id="achievements-screen" class="screen">
+        <div class="modal-card">
+            <h2>🏆 ACHIEVEMENTS</h2>
+            <div class="achieve-list">
+                <div class="achieve-item" id="ach-1">
+                    <span class="icon">🔍</span>
+                    <div>
+                        <h4>FIRST DISCOVERY</h4>
+                        <p>สแกนสิ่งมีชีวิตครั้งแรก</p>
+                    </div>
+                </div>
+                <div class="achieve-item" id="ach-2">
+                    <span class="icon">🧪</span>
+                    <div>
+                        <h4>MASTER ECOLOGIST</h4>
+                        <p>ปลดล็อก Science Lab ครบทั้งหมด</p>
+                    </div>
+                </div>
+                <div class="achieve-item" id="ach-3">
+                    <span class="icon">⚖️</span>
+                    <div>
+                        <h4>ECO HERO</h4>
+                        <p>ทำให้ Balance Level สูงกว่า 90%</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn back-to-menu">◀ BACK TO MENU</button>
+        </div>
+    </div>
+
+    <!-- GAME PLAY SCREEN -->
+    <div id="game-screen" class="screen">
+        <!-- HUD HEADER -->
+        <header class="hud-header">
+            <div class="hud-stat">
+                <span>🌍 BALANCE:</span>
+                <div class="progress-bar-bg">
+                    <div id="balance-bar" class="progress-bar-fill" style="width: 50%;"></div>
+                </div>
+                <span id="balance-val">50%</span>
+            </div>
+            <div class="hud-stat">
+                <span>⚡ ENERGY:</span>
+                <div class="progress-bar-bg energy">
+                    <div id="energy-bar" class="progress-bar-fill energy" style="width: 100%;"></div>
+                </div>
+                <span id="energy-val">100%</span>
+            </div>
+            <div class="hud-stat">
+                <span>⭐ SCORE: <span id="score-val">0</span></span>
+            </div>
+            <div class="hud-stat">
+                <span>📅 <span id="day-val">DAY 1</span></span>
+            </div>
+            <button id="btn-sound" class="icon-btn">🔊</button>
+        </header>
+
+        <!-- CANVAS GAME WORLD -->
+        <div class="canvas-container">
+            <canvas id="gameCanvas"></canvas>
+            <div id="interaction-prompt" class="hidden">Press E / Click ACTION to Interact</div>
+        </div>
+
+        <!-- MOBILE CONTROLS & HUD FOOTER -->
+        <footer class="hud-footer">
+            <div class="virtual-joystick">
+                <button class="dpad-btn up" id="btn-up">▲</button>
+                <button class="dpad-btn left" id="btn-left">◀</button>
+                <button class="dpad-btn center">●</button>
+                <button class="dpad-btn right" id="btn-right">▶</button>
+                <button class="dpad-btn down" id="btn-down">▼</button>
+            </div>
+            <div class="action-buttons">
+                <button id="btn-scan" class="action-btn">🔍 SCAN</button>
+                <button id="btn-action" class="action-btn active">⚡ ACTION</button>
+                <button id="btn-ecomap" class="action-btn">🌐 ECO MAP</button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- SCANNER MODAL POPUP -->
+    <div id="scanner-modal" class="modal-overlay hidden">
+        <div class="modal-card scan-card">
+            <h3 id="scan-title">🌱 SCANNING OBJECT...</h3>
+            <hr>
+            <p><strong>TYPE:</strong> <span id="scan-type">-</span></p>
+            <p><strong>FUNCTION:</strong> <span id="scan-func">-</span></p>
+            <p><strong>POPULATION:</strong> <span id="scan-pop">-</span></p>
+            <p><strong>STATUS:</strong> <span id="scan-status">-</span></p>
+            <button id="btn-close-scan" class="btn">CLOSE</button>
+        </div>
+    </div>
+
+    <!-- ECO MAP MODAL POPUP -->
+    <div id="ecomap-modal" class="modal-overlay hidden">
+        <div class="modal-card large">
+            <h2>🌐 ECOSYSTEM FOOD WEB & MAP</h2>
+            <div class="food-web-diagram">
+                <div class="node">☀️ SUN</div>
+                <div class="arrow">↓</div>
+                <div class="node" id="map-node-plant">🌱 PLANTS (Producers)</div>
+                <div class="arrow">↓</div>
+                <div class="node" id="map-node-herb">🐇 RABBITS (Primary Consumers)</div>
+                <div class="arrow">↓</div>
+                <div class="node" id="map-node-pred">🦊 FOXES (Predators)</div>
+            </div>
+            <div class="eco-actions-panel">
+                <h3>⚡ ACTION PROTOCOL (ฟื้นฟูระบบนิเวศ)</h3>
+                <p>เลือกการกระทำที่ใช้พลังงาน ⚡ เพื่อแก้ปัญหาความสมดุล:</p>
+                <div class="action-grid">
+                    <button class="btn action-exec-btn" data-action="plant">🌱 ปลูกพืช (+Plants, -20⚡)</button>
+                    <button class="btn action-exec-btn" data-action="water">💧 บำบัดน้ำ (+Water, -15⚡)</button>
+                    <button class="btn action-exec-btn" data-action="fox">🦊 ปล่อยสุนัขจิ้งจอก (+Foxes, -25⚡)</button>
+                    <button class="btn action-exec-btn" data-action="rest">💤 พักผ่อนฟื้นพลังงาน (+50⚡, ผ่าน 1 วัน)</button>
+                </div>
+            </div>
+            <button id="btn-close-ecomap" class="btn">CLOSE MAP</button>
+        </div>
+    </div>
+
+    <!-- WIN / LOSE OVERLAY -->
+    <div id="endgame-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <h2 id="endgame-title">🌍 MISSION COMPLETE!</h2>
+            <p id="endgame-desc">คุณสามารถฟื้นฟูระบบนิเวศกลับสู่สมดุลได้สำเร็จ</p>
+            <div class="end-stats">
+                <p>FINAL BALANCE: <strong id="end-balance">0%</strong></p>
+                <p>FINAL SCORE: <strong id="end-score">0</strong></p>
+                <p>RANK: <strong id="end-rank">🥇 MASTER OF ECOSYSTEM</strong></p>
+            </div>
+            <button id="btn-restart" class="btn primary-btn">▶ RESTART MISSION</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
